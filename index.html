@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perspectiva Matemática — Quantitative dashboards & market analysis</title>
+  <meta name="description" content="Perspectiva Matemática is a public research hub focused on quantitative market analysis, interactive dashboards and data-driven financial visualization." />
+  <meta name="author" content="BS Gobra" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#home" class="brand-link" data-tab-link="home">
+          <span class="brand-name">Perspectiva Matemática</span>
+          <span class="brand-by">by BS Gobra</span>
+        </a>
+      </div>
+
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="tab is-active" data-tab="home">Home</button>
+        <button class="tab" data-tab="event-window">Event Window</button>
+        <button class="tab" data-tab="silver">Silver Dashboard</button>
+        <button class="tab" data-tab="sectors">Sectors</button>
+        <button class="tab" data-tab="sentiment">Sentiment</button>
+        <button class="tab" data-tab="links">Links</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============== HOME ============== -->
+    <section class="panel is-active" id="home" data-panel="home">
+
+      <div class="hero">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Perspectiva <span class="accent">Matemática</span>
+          </h1>
+          <p class="hero-tagline">Quantitative dashboards and market analysis from a mathematical perspective.</p>
+          <p class="hero-desc">
+            Perspectiva Matemática is a public research hub focused on quantitative market
+            analysis, interactive dashboards and data-driven financial visualization. The site
+            gathers projects built around financial time series, market events, commodities,
+            sectors and market-based sentiment indicators.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Reemplaza este bloque por <img src="assets/main-visual.png" alt="..."> cuando subas tu imagen -->
+          <div class="visual-placeholder" role="img" aria-label="Main Visual / Logo placeholder">
+            <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="gline" x1="0" x2="1" y1="1" y2="0">
+                  <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.85"/>
+                  <stop offset="100%" stop-color="#35D07F" stop-opacity="0.95"/>
+                </linearGradient>
+                <linearGradient id="garea" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#35D07F" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#35D07F" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- subtle grid -->
+              <g stroke="#2A3036" stroke-width="1">
+                <line x1="40"  y1="40"  x2="40"  y2="280"/>
+                <line x1="40"  y1="280" x2="280" y2="280"/>
+                <line x1="40"  y1="220" x2="280" y2="220" stroke-dasharray="2 4" opacity="0.6"/>
+                <line x1="40"  y1="160" x2="280" y2="160" stroke-dasharray="2 4" opacity="0.6"/>
+                <line x1="40"  y1="100" x2="280" y2="100" stroke-dasharray="2 4" opacity="0.6"/>
+              </g>
+              <!-- area under curve -->
+              <path d="M40,240 C80,200 110,260 140,200 S200,80 240,120 L280,90 L280,280 L40,280 Z" fill="url(#garea)"/>
+              <!-- main curve -->
+              <path d="M40,240 C80,200 110,260 140,200 S200,80 240,120 L280,90"
+                    fill="none" stroke="url(#gline)" stroke-width="3" stroke-linecap="round"/>
+              <!-- markers -->
+              <circle cx="140" cy="200" r="4" fill="#22D3EE"/>
+              <circle cx="240" cy="120" r="4" fill="#35D07F"/>
+              <circle cx="280" cy="90"  r="4" fill="#35D07F"/>
+              <!-- math symbol -->
+              <text x="56" y="78" fill="#AAB4B0" font-family="Georgia, serif" font-size="34" font-style="italic">σ</text>
+              <text x="86" y="78" fill="#4B5560" font-family="Georgia, serif" font-size="20">∫</text>
+            </svg>
+            <span class="visual-placeholder-label">Main Visual / Logo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">A growing collection of quantitative dashboards and market analysis tools.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <button class="project-card" data-tab-link="event-window" type="button">
+          <div class="project-card-head">
+            <span class="project-card-tag">01</span>
+            <h3 class="project-card-title">Event Window</h3>
+          </div>
+          <p class="project-card-desc">
+            Analyze how financial assets behave before and after relevant market events,
+            geopolitical shocks and commodity-related episodes.
+          </p>
+          <span class="project-card-cta">Open project →</span>
+        </button>
+
+        <button class="project-card" data-tab-link="silver" type="button">
+          <div class="project-card-head">
+            <span class="project-card-tag">02</span>
+            <h3 class="project-card-title">Silver Dashboard</h3>
+          </div>
+          <p class="project-card-desc">
+            Commodity dashboard focused on silver market dynamics, related assets,
+            macro drivers and statistical signals.
+          </p>
+          <span class="project-card-cta">Open project →</span>
+        </button>
+
+        <button class="project-card" data-tab-link="sectors" type="button">
+          <div class="project-card-head">
+            <span class="project-card-tag">03</span>
+            <h3 class="project-card-title">Sectors</h3>
+          </div>
+          <p class="project-card-desc">
+            Sector behavior, relative performance and market rotation across different
+            phases of the investment cycle.
+          </p>
+          <span class="project-card-cta">Open project →</span>
+        </button>
+
+        <button class="project-card" data-tab-link="sentiment" type="button">
+          <div class="project-card-head">
+            <span class="project-card-tag">04</span>
+            <h3 class="project-card-title">Sentiment</h3>
+          </div>
+          <p class="project-card-desc">
+            Market-based sentiment indicators that transform financial variables into
+            interpretable measures of risk appetite and stress.
+          </p>
+          <span class="project-card-cta">Open project →</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ============== EVENT WINDOW ============== -->
+    <section class="panel" id="event-window" data-panel="event-window">
+      <article class="project">
+        <header class="project-header">
+          <span class="project-eyebrow">Project 01</span>
+          <h2 class="project-title">Event Window <span class="project-title-sub">/ Event Window Analysis</span></h2>
+          <p class="project-lead">
+            An event-based dashboard designed to analyze how financial assets behave before and
+            after relevant market events, including geopolitical shocks, energy disruptions and
+            commodity-related episodes.
+          </p>
+        </header>
+
+        <div class="project-grid">
+          <div class="preview-placeholder" role="img" aria-label="Event Window Preview placeholder">
+            <span class="preview-label">Event Window Preview</span>
+          </div>
+
+          <div class="project-meta">
+            <h3 class="meta-heading">Objective</h3>
+            <p>
+              The objective is to compare asset performance around selected event dates using a
+              consistent event-window framework. The project helps identify patterns in prices,
+              returns, drawdowns and relative performance before and after market shocks.
+            </p>
+
+            <div class="actions">
+              <button class="btn btn-primary is-disabled" disabled aria-disabled="true" title="Coming soon">View Dashboard</button>
+              <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">View Code</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology">
+          <h3 class="meta-heading">Methodology</h3>
+          <p>
+            The analysis starts by defining a set of relevant historical event dates and a group
+            of financial assets or indicators. Each asset is aligned around the event date using a
+            common pre-event and post-event window. Price series can be normalized to compare
+            behavior across different periods and assets. The dashboard is intended to support
+            visual comparison of market reactions across events.
+          </p>
+          <ul class="bullets">
+            <li>Define a set of relevant historical event dates.</li>
+            <li>Select a group of financial assets or market indicators.</li>
+            <li>Normalize price series around each event date.</li>
+            <li>Compare pre-event and post-event behavior.</li>
+            <li>Analyze cumulative performance, drawdowns and relative movements.</li>
+            <li>Use the same window length across events to improve comparability.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============== SILVER DASHBOARD ============== -->
+    <section class="panel" id="silver" data-panel="silver">
+      <article class="project">
+        <header class="project-header">
+          <span class="project-eyebrow">Project 02</span>
+          <h2 class="project-title">Silver Dashboard <span class="project-title-sub">/ Silver Market Dashboard</span></h2>
+          <p class="project-lead">
+            A commodity dashboard focused on silver market dynamics, including price behavior,
+            related assets, macro drivers and statistical signals.
+          </p>
+        </header>
+
+        <div class="project-grid">
+          <div class="preview-placeholder" role="img" aria-label="Silver Dashboard Preview placeholder">
+            <span class="preview-label">Silver Dashboard Preview</span>
+          </div>
+
+          <div class="project-meta">
+            <h3 class="meta-heading">Objective</h3>
+            <p>
+              The objective is to monitor silver as a commodity and market asset, combining price
+              analysis, related indicators and quantitative signals to better understand changes
+              in trend, risk and market behavior.
+            </p>
+
+            <div class="actions">
+              <button class="btn btn-primary is-disabled" disabled aria-disabled="true" title="Coming soon">View Dashboard</button>
+              <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">View Code</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology">
+          <h3 class="meta-heading">Methodology</h3>
+          <p>
+            The dashboard tracks silver price behavior across different horizons and compares it
+            against related market variables. The project is designed to identify changes in
+            trend, potential breakouts, risk episodes and shifts in market behavior using
+            quantitative indicators.
+          </p>
+          <ul class="bullets">
+            <li>Track silver price behavior across different time horizons.</li>
+            <li>Compare silver against related assets and macro variables.</li>
+            <li>Calculate returns, drawdowns and rolling performance metrics.</li>
+            <li>Identify potential breakouts or changes in market behavior.</li>
+            <li>Use quantitative indicators to support market interpretation.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============== SECTORS ============== -->
+    <section class="panel" id="sectors" data-panel="sectors">
+      <article class="project">
+        <header class="project-header">
+          <span class="project-eyebrow">Project 03</span>
+          <h2 class="project-title">Sectors <span class="project-title-sub">/ Sector Rotation Dashboard</span></h2>
+          <p class="project-lead">
+            A dashboard focused on sector behavior, relative performance and market rotation
+            across different phases of the investment cycle.
+          </p>
+        </header>
+
+        <div class="project-grid">
+          <div class="preview-placeholder" role="img" aria-label="Sectors Preview placeholder">
+            <span class="preview-label">Sectors Preview</span>
+          </div>
+
+          <div class="project-meta">
+            <h3 class="meta-heading">Objective</h3>
+            <p>
+              The objective is to analyze how equity sectors behave relative to the broader
+              market, identifying leadership, defensive behavior, rotations and potential regime
+              changes.
+            </p>
+
+            <div class="actions">
+              <button class="btn btn-primary is-disabled" disabled aria-disabled="true" title="Coming soon">View Dashboard</button>
+              <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">View Code</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology">
+          <h3 class="meta-heading">Methodology</h3>
+          <p>
+            The analysis compares sector performance against a broad equity benchmark and
+            evaluates relative strength across different windows. The dashboard is intended to
+            support the identification of sector leadership, defensive behavior and market
+            rotation patterns.
+          </p>
+          <ul class="bullets">
+            <li>Track sector performance relative to a broad equity benchmark.</li>
+            <li>Calculate relative returns and rolling performance indicators.</li>
+            <li>Group sectors according to economic or market-cycle characteristics.</li>
+            <li>Compare sector leadership across different time windows.</li>
+            <li>Use quantitative tools to identify possible rotation patterns.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============== SENTIMENT ============== -->
+    <section class="panel" id="sentiment" data-panel="sentiment">
+      <article class="project">
+        <header class="project-header">
+          <span class="project-eyebrow">Project 04</span>
+          <h2 class="project-title">Sentiment <span class="project-title-sub">/ Market Sentiment Dashboard</span></h2>
+          <p class="project-lead">
+            A market-based sentiment dashboard designed to transform financial indicators into
+            interpretable measures of risk appetite, stress and investor behavior.
+          </p>
+        </header>
+
+        <div class="project-grid">
+          <div class="preview-placeholder" role="img" aria-label="Sentiment Preview placeholder">
+            <span class="preview-label">Sentiment Preview</span>
+          </div>
+
+          <div class="project-meta">
+            <h3 class="meta-heading">Objective</h3>
+            <p>
+              The objective is to build sentiment indicators using market data, capturing changes
+              in risk appetite, stress conditions and directional behavior without relying on
+              textual sources.
+            </p>
+
+            <div class="actions">
+              <button class="btn btn-primary is-disabled" disabled aria-disabled="true" title="Coming soon">View Dashboard</button>
+              <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">View Code</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology">
+          <h3 class="meta-heading">Methodology</h3>
+          <p>
+            The initial version uses market variables associated with risk appetite, volatility,
+            asset performance and stress conditions. Indicators are standardized and combined to
+            create interpretable measures of market sentiment.
+          </p>
+          <ul class="bullets">
+            <li>Select market variables related to risk appetite, volatility and asset performance.</li>
+            <li>Standardize indicators to make them comparable.</li>
+            <li>Combine individual signals into broader sentiment measures.</li>
+            <li>Monitor changes across time and identify periods of stress or optimism.</li>
+            <li>Use market-based inputs only in the initial version.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============== LINKS ============== -->
+    <section class="panel" id="links" data-panel="links">
+      <header class="project-header">
+        <span class="project-eyebrow">Contact</span>
+        <h2 class="project-title">Links</h2>
+        <p class="project-lead">External links and contact channels.</p>
+      </header>
+
+      <div class="links-grid">
+        <div class="link-card">
+          <span class="link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.18c-3.2.7-3.87-1.37-3.87-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38.97 0 1.95.13 2.86.38 2.19-1.48 3.15-1.17 3.15-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.35.78 1.04.78 2.1v3.11c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          </span>
+          <div class="link-body">
+            <h3 class="link-title">GitHub</h3>
+            <p class="link-desc">Source code and project repositories.</p>
+          </div>
+          <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">Visit</button>
+        </div>
+
+        <div class="link-card">
+          <span class="link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.86 3.36-1.86 3.59 0 4.25 2.36 4.25 5.43v6.32zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </span>
+          <div class="link-body">
+            <h3 class="link-title">LinkedIn</h3>
+            <p class="link-desc">Professional profile and updates.</p>
+          </div>
+          <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">Visit</button>
+        </div>
+
+        <div class="link-card">
+          <span class="link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2 4h20c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm10 8.84L21.2 6H2.8L12 12.84zM2 8.4V18h20V8.4l-10 7.41L2 8.4z"/></svg>
+          </span>
+          <div class="link-body">
+            <h3 class="link-title">Email</h3>
+            <p class="link-desc">Direct contact for collaborations and inquiries.</p>
+          </div>
+          <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">Contact</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="disclaimer">
+        <span class="disclaimer-tag">Disclaimer</span>
+        <p>
+          The content presented on this site is for analytical and educational purposes only.
+          It does not constitute investment advice, a recommendation, or an offer to buy or sell
+          any financial instrument.
+        </p>
+      </div>
+      <div class="signature">
+        <span>Developed by <strong>BS Gobra</strong></span>
+        <span class="dot">•</span>
+        <span>Perspectiva Matemática</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
