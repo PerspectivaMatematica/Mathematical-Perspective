@@ -1,0 +1,13 @@
+# Notas privadas (no se suben a GitHub)
+notas-privadas.md
+
+# OS / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log

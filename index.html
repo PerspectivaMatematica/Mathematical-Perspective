@@ -71,8 +71,9 @@
             <h3 class="project-card-title">Event Window</h3>
           </div>
           <p class="project-card-desc">
-            Analyze how financial assets behave before and after relevant market events,
-            geopolitical shocks and commodity-related episodes.
+            Cross-asset event-study dashboard quantifying how equities, sovereign rates, FX
+            and commodities have historically reacted to major macroeconomic and geopolitical
+            shocks.
           </p>
           <span class="project-card-cta">Open project →</span>
         </button>
@@ -121,30 +122,39 @@
       <article class="project">
         <header class="project-header">
           <span class="project-eyebrow">Project 01</span>
-          <h2 class="project-title">Event Window <span class="project-title-sub">/ Event Window Analysis</span></h2>
+          <h2 class="project-title">Event Window <span class="project-title-sub">/ Cross-Asset Event Study</span></h2>
           <p class="project-lead">
-            An event-based dashboard designed to analyze how financial assets behave before and
-            after relevant market events, including geopolitical shocks, energy disruptions and
-            commodity-related episodes.
+            An interactive event-study dashboard that quantifies the historical reaction of
+            cross-asset markets to discrete macroeconomic and geopolitical shocks. Aligned in
+            event time, the tool compares price paths across equities, sovereign rates, FX and
+            commodities to support empirical benchmarking of expected post-event behavior.
           </p>
         </header>
 
         <div class="project-grid">
-          <div class="preview-placeholder" role="img" aria-label="Event Window Preview placeholder">
-            <span class="preview-label">Event Window Preview</span>
-          </div>
+          <img src="assets/event-window.png"
+               alt="Event Window dashboard preview"
+               class="preview-image" />
 
           <div class="project-meta">
             <h3 class="meta-heading">Objective</h3>
             <p>
-              The objective is to compare asset performance around selected event dates using a
-              consistent event-window framework. The project helps identify patterns in prices,
-              returns, drawdowns and relative performance before and after market shocks.
+              The project addresses how specific asset classes have historically behaved in the
+              days, weeks or months surrounding major shocks such as Lehman Brothers, the COVID
+              crash, the SVB collapse or recent tariff announcements. It supports portfolio
+              managers, risk teams and macro researchers in calibrating reaction priors, sizing
+              tail-risk hedges and stress-testing positioning against documented historical
+              analogues. The dashboard replaces ad-hoc post-mortem comparisons that would
+              otherwise be performed manually in spreadsheets.
             </p>
 
             <div class="actions">
-              <button class="btn btn-primary is-disabled" disabled aria-disabled="true" title="Coming soon">View Dashboard</button>
-              <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">View Code</button>
+              <a class="btn btn-primary"
+                 href="https://dashboardevenwindow-8sxfdajuwhmrn49xdimmhw.streamlit.app/"
+                 target="_blank" rel="noopener">View Dashboard</a>
+              <a class="btn btn-ghost"
+                 href="https://github.com/PerspectivaMatematica/Dashboard_Even_Window"
+                 target="_blank" rel="noopener">View Code</a>
             </div>
           </div>
         </div>
@@ -152,20 +162,50 @@
         <div class="methodology">
           <h3 class="meta-heading">Methodology</h3>
           <p>
-            The analysis starts by defining a set of relevant historical event dates and a group
-            of financial assets or indicators. Each asset is aligned around the event date using a
-            common pre-event and post-event window. Price series can be normalized to compare
-            behavior across different periods and assets. The dashboard is intended to support
-            visual comparison of market reactions across events.
+            The dashboard implements a cross-asset event-study framework. For each event date and
+            ticker, the engine extracts a configurable lookback/lookforward window in event time
+            (T−N to T+N) at daily, weekly, monthly or annual frequency. Series are normalized via
+            three modes: base-100 indexing for equities, FX and commodities; basis-point change
+            from anchor for sovereign rates; and unscaled levels for volatility benchmarks such
+            as VIX. Missing observations on weekends or holidays inherit the most recent prior
+            trading-day value, avoiding forward-looking bias. An equal-weighted cross-event mean
+            curve is overlaid on each chart for visual benchmarking. Results are organized into
+            six pre-built categorical baskets — global macro, S&amp;P sectors, US/MX rates, FX,
+            commodities, Europe &amp; EM — and exportable as PDF, PNG, HTML or CSV.
           </p>
           <ul class="bullets">
-            <li>Define a set of relevant historical event dates.</li>
-            <li>Select a group of financial assets or market indicators.</li>
-            <li>Normalize price series around each event date.</li>
-            <li>Compare pre-event and post-event behavior.</li>
-            <li>Analyze cumulative performance, drawdowns and relative movements.</li>
-            <li>Use the same window length across events to improve comparability.</li>
+            <li><strong>Data:</strong> Bloomberg API or user-uploaded CSV/Excel as time-series price feed.</li>
+            <li><strong>Event selection:</strong> 25-event built-in catalog plus user-defined arbitrary dated shocks.</li>
+            <li><strong>Event window:</strong> configurable lookback/lookforward at daily, weekly, monthly or annual frequency.</li>
+            <li><strong>Normalization:</strong> base-100 indexing for prices; basis-point change for sovereign-rate series.</li>
+            <li><strong>Metrics:</strong> cumulative return, percent change, absolute change, indexed level, raw price.</li>
+            <li><strong>Aggregation:</strong> equal-weighted mean curve overlaid across all events per ticker.</li>
+            <li><strong>Categorical baskets:</strong> six presets covering ~80 cross-asset Bloomberg tickers.</li>
+            <li><strong>Limitations:</strong> prior-day fill for gaps; no formal statistical-significance testing performed.</li>
           </ul>
+        </div>
+
+        <div class="project-extras">
+          <div class="extra-card">
+            <h3 class="meta-heading">Data sources</h3>
+            <ul class="bullets meta-list">
+              <li><strong>Source:</strong> Bloomberg Terminal via blpapi, or user-uploaded CSV/Excel.</li>
+              <li><strong>Assets:</strong> ~80 tickers — equities (SPX, NDX, S&amp;P GICS sectors, IPC, MSCI EM, DAX, FTSE, Nikkei, Hang Seng), sovereign rates (US Treasuries 2Y–30Y, MX MBONOS, German Bunds, TIPS, breakevens, TIIE), FX (USD majors and EM crosses, DXY) and commodities (WTI, Brent, natural gas, gold, silver, copper, aluminum, agriculturals).</li>
+              <li><strong>Frequency:</strong> daily, resampled on demand to weekly, monthly or annual.</li>
+              <li><strong>Historical range:</strong> configurable; default 2010–present for Bloomberg, full file range for CSV/Excel.</li>
+            </ul>
+          </div>
+
+          <div class="extra-card">
+            <h3 class="meta-heading">Tech stack</h3>
+            <ul class="bullets meta-list">
+              <li><strong>Language:</strong> Python 3.11+.</li>
+              <li><strong>Core libraries:</strong> pandas, numpy, plotly, matplotlib, openpyxl, blpapi (optional), kaleido.</li>
+              <li><strong>Dashboard framework:</strong> Streamlit.</li>
+              <li><strong>PDF generation:</strong> pdflatex (LaTeX) with matplotlib PdfPages fallback for environments without LaTeX.</li>
+              <li><strong>Hosting:</strong> Streamlit Cloud and local Python (with Bloomberg Terminal).</li>
+            </ul>
+          </div>
         </div>
       </article>
     </section>
@@ -339,7 +379,9 @@
             <h3 class="link-title">GitHub</h3>
             <p class="link-desc">Source code and project repositories.</p>
           </div>
-          <button class="btn btn-ghost is-disabled" disabled aria-disabled="true" title="Coming soon">Visit</button>
+          <a class="btn btn-ghost"
+             href="https://github.com/PerspectivaMatematica"
+             target="_blank" rel="noopener">Visit</a>
         </div>
 
         <div class="link-card">
